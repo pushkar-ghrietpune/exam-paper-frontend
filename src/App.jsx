@@ -192,20 +192,23 @@ return (
         </div>
 
         {loading &&
-                <p>Loading papers...</p>
+                <div className="status-card loading">
+                    ⏳ Loading papers...
+                </div>
         }
+
         {error &&
-            <p style={{color:"red"}}>
-                {error}
-            </p>
+            <div className="status-card error">
+                ❌ {error}
+            </div>
         }
-        {!loading &&
-            !error &&
-            papers.length === 0 &&
-            selectedSubject &&
-        (
-            <p>No papers available.</p>
+
+        {!loading && !error && papers.length === 0 && selectedSubject && (
+            <div className="status-card empty">
+                📄 No papers available for this subject.
+            </div>
         )}
+        
         {!loading &&
             !error &&
             papers.length > 0 &&

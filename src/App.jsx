@@ -5,6 +5,8 @@ import { getPapers } from './services/paperService';
 
 import PaperTable from './components/PaperTable';
 import Footer from './components/Footer';
+import './css/App.css';
+
 function App() {
 
 
@@ -208,7 +210,7 @@ return (
                 📄 No papers available for this subject.
             </div>
         )}
-        
+
         {!loading &&
             !error &&
             papers.length > 0 &&

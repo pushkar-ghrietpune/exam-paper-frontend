@@ -67,3 +67,31 @@ body {
     color: #0d6efd;
 
 }
+
+.status-card {
+    margin: 20px auto;
+    padding: 16px;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.loading {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.empty {
+    background-color: #f5f5f5;
+    color: #616161;
+    border: 1px solid #bdbdbd;
+}

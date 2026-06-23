@@ -15,6 +15,10 @@ const [papers, setPapers] = useState([]);
 const [selectedClass, setSelectedClass] = useState('');
 const [selectedSubject, setSelectedSubject] = useState('');
 
+//error handeling states
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState("");
+
 useEffect(() => {
 
     getClasses()
@@ -61,15 +65,33 @@ const handleSubjectChange = (event) => {
 
     setSelectedSubject(subjectId);
 
+    setLoading(true);
+    setError("");
+
     getPapers(subjectId)
+
         .then(response => {
 
             setPapers(response.data);
 
         })
+
         .catch(error => {
 
             console.error(error);
+
+            setError(
+                error.response?.data?.message ||
+                "Unable to load papers. Please try again later."
+            );
+
+            setPapers([]);
+
+        })
+
+        .finally(() => {
+
+            setLoading(false);
 
         });
 
@@ -169,7 +191,29 @@ return (
 
         </div>
 
-        <PaperTable papers={papers}/>
+        {loading &&
+                <p>Loading papers...</p>
+        }
+        {error &&
+            <p style={{color:"red"}}>
+                {error}
+            </p>
+        }
+        {!loading &&
+            !error &&
+            papers.length === 0 &&
+            selectedSubject &&
+        (
+            <p>No papers available.</p>
+        )}
+        {!loading &&
+            !error &&
+            papers.length > 0 &&
+        (
+            <PaperTable papers={papers}/>
+        )}
+
+        
 
         <Footer />
 

@@ -1,0 +1,181 @@
+.admin-card {
+
+
+background: white;
+
+padding: 24px;
+
+margin-bottom: 24px;
+
+border-radius: 12px;
+
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+
+}
+
+.admin-card h2 {
+
+
+margin-bottom: 20px;
+
+color: #333;
+
+
+}
+
+.form-row {
+
+
+display: flex;
+
+gap: 12px;
+
+margin-bottom: 20px;
+
+
+}
+
+.form-row input {
+
+
+flex: 1;
+
+padding: 10px;
+
+border: 1px solid #ccc;
+
+border-radius: 8px;
+
+font-size: 15px;
+
+
+}
+
+.add-btn {
+
+
+background: #28a745;
+
+color: white;
+
+border: none;
+
+padding: 10px 18px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+
+}
+
+.add-btn:hover {
+
+
+background: #218838;
+
+
+}
+
+.edit-btn {
+
+
+background: #007bff;
+
+color: white;
+
+border: none;
+
+padding: 8px 12px;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+margin-right: 8px;
+
+
+}
+
+.edit-btn:hover {
+
+
+background: #0056b3;
+
+
+}
+
+.delete-btn {
+
+
+background: #dc3545;
+
+color: white;
+
+border: none;
+
+padding: 8px 12px;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+
+}
+
+.delete-btn:hover {
+
+background: #b02a37;
+
+
+}
+
+table {
+
+
+width: 100%;
+
+border-collapse: collapse;
+
+
+}
+
+th {
+
+background: #f4f6f9;
+
+text-align: left;
+
+padding: 12px;
+
+
+}
+
+td {
+
+
+padding: 12px;
+
+border-bottom: 1px solid #eee;
+
+
+}
+
+tbody tr:nth-child(even) {
+
+
+background: #fafafa;
+ 
+
+}
+
+.error-text {
+
+ 
+color: red;
+
+margin-bottom: 15px;
+
+
+}

@@ -1,0 +1,97 @@
+.admin-page {
+
+background-color: #f4f6f9;
+
+min-height: 100vh;
+
+padding: 30px;
+
+position: relative;
+
+}
+
+.admin-title {
+
+color: #333;
+
+margin-bottom: 25px;
+
+}
+
+.tab-container {
+
+display: flex;
+
+gap: 15px;
+
+margin-bottom: 25px;
+
+}
+
+.tab-container button {
+
+border: none;
+
+background: white;
+
+padding: 12px 20px;
+
+border-radius: 10px;
+
+cursor: pointer;
+
+box-shadow: 0 2px 6px rgba(0,0,0,.1);
+
+}
+
+.active-tab {
+
+background: #007bff !important;
+
+color: white;
+
+}
+.home-btn {
+
+    background-color: #2196f3;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+.logout-btn {
+
+    background-color: #f44336;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+.top-right-buttons {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    display: flex;
+
+    gap: 12px;
+
+}

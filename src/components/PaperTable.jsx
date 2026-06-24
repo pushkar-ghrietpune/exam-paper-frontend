@@ -71,23 +71,22 @@ return (
 
                                             </p>
 
+
+
                                             <div className="d-flex justify-content-end">
-
-                                                <button
-                                                    className="btn btn-outline-primary"
-                                                    onClick={() =>
-                                                        window.open(
-                                                            paper.pdfUrl,
-                                                            "_blank"
-                                                        )
-                                                    }
-                                                >
-
-                                                    <FaEye className="me-2"/>
+                                                <a  className="btn btn-outline-primary"
+                                                        href={
+                                                            import.meta.env.VITE_API_BASE_URL
+                                                            +
+                                                            paper.pdfUrl
+                                                        }
+                                                        target="_blank"
+                                                    >
+                                                        <FaEye className="me-2"/>
 
                                                     View PDF
 
-                                                </button>
+                                                </a>                                               
 
                                             </div>
 

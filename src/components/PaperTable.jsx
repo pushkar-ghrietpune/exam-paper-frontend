@@ -76,9 +76,7 @@ return (
                                             <div className="d-flex justify-content-end">
                                                 <a  className="btn btn-outline-primary"
                                                         href={
-                                                            import.meta.env.VITE_API_BASE_URL
-                                                            +
-                                                            paper.pdfUrl
+                                                                   paper.pdfUrl
                                                         }
                                                         target="_blank"
                                                     >

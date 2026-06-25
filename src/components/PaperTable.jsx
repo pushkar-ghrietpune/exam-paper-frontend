@@ -1,7 +1,9 @@
 import { FaEye, FaFilePdf } from "react-icons/fa";
+import API_BASE_URL from "../services/api";
+
 
 function PaperTable({ papers }) {
-
+    
 
 const groupedPapers = Object.groupBy(
 
@@ -74,12 +76,17 @@ return (
 
 
                                             <div className="d-flex justify-content-end">
-                                                <a  className="btn btn-outline-primary"
-                                                        href={
-                                                                   paper.pdfUrl
-                                                        }
-                                                        target="_blank"
-                                                    >
+                                                <a
+                                                    className="btn btn-outline-primary"
+                                                    href={`${API_BASE_URL}${paper.pdfUrl}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={() =>
+                                                        console.log(
+                                                            `${API_BASE_URL}${paper.pdfUrl}`
+                                                        )
+                                                    }
+                                                >
                                                         <FaEye className="me-2"/>
 
                                                     View PDF

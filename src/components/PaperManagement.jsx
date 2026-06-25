@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE_URL from "../services/api";
 
 import {
 getPapers,
@@ -592,20 +593,11 @@ return (
                                         ?
 
                                         <a
-
-                                            href={
-                                            
-                                                paper.pdfUrl
-                                            }
-
+                                            href={`${API_BASE_URL}${paper.pdfUrl}`}
                                             target="_blank"
-
-                                            rel="noreferrer"
-
+                                            rel="noopener noreferrer"
                                         >
-
                                             View PDF
-
                                         </a>
 
                                         :
